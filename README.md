@@ -1,2 +1,1 @@
-# Ycyy
-ycyy-project
+# 优易数据（协同项目）
