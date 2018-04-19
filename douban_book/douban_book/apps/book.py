@@ -5,19 +5,19 @@ import os
 from flask import (Flask,request....)
 """
 from flask import (Blueprint, render_template, jsonify, json)
-from douban_book.helper import DoubanBook
+from douban_book.helper import DoubanBook,BookViewModel
 
 book = Blueprint('book', __name__, url_prefix='/book')
 
 
-@book.route('/search/<q>/<int:start>/<int:count>/', methods=["GET"])
+@book.route('/search/<q>/', methods=["GET"])
 def index(q, start, count):
     """
     图书主页
     需要序列化 serializers
     :return:
     """
-    if q and start is not None:
-        result = DoubanBook.search_by_keywords(q, start, count)
-        return jsonify(result)
-        # return json.dumps(result), 200, {'content-type': 'application/json; charset=utf-8'}
+    if q is not None:
+        result = DoubanBook.search_by_keywords(q)
+        books = BookViewModel.package_data(result, q)
+        return render_template("index.html", data=books.get('books'))

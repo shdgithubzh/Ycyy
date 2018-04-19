@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Python分享</title>
 
@@ -13,6 +15,7 @@
 <body>
 <!-- 图片轮播 -->
 <!-- 圆点 -->
+
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -108,25 +111,23 @@
                     </h4>
                 </a>
                 <!-- 文章列表 -->
-                {% for i in range(4) %}
+                {% for book in data %}
                     <div class="list-group-item item_article">
                         <div class="row">
                             <div class="div_center col-xs-9">
                                 <div class="list-group-item-heading div_article_title">
                                     <strong>
-                                        图书-Android框架设计理念
+                                        {{ book.title }}
                                     </strong>
                                 </div>
                                 <p class="list-group-item-text div_article_content">
-                                    所有设计源于生活，框终点在于分层、层与层之间如何交流。
-                                    所有设计源于生活，框终点在于分层、层与层之间如何交流。
-                                    所有设计源于生活，框终点在于分层、层与层之间如何交流。
+                                    {{ book.summary }}
                                 </p>
                             </div>
                             <!-- 右侧图片，信息 -->
                             <div class="col-xs-3 div_right_info">
                                 <img class="iv_article img-rounded"
-                                     src="{{ url_for('static',filename="img/ic_android1.jpg") }}">
+                                     src="{{ book.image }}">
                             </div>
                         </div>
                     </div>

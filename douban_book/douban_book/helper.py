@@ -13,6 +13,7 @@ class HTTP:
     静态方法直接通过类名去访问
     而非静态方法需要创建对象
     """
+
     @staticmethod
     def get(url, retuen_json=True):
         res = requests.get(url)
@@ -25,10 +26,38 @@ class DoubanBook:
     """
     检索豆瓣的图书
     """
-    keywords_url = 'https://api.douban.com/v2/book/search?q={}&start={}&count={}'
+    keywords_url = 'https://api.douban.com/v2/book/search?q={}&count={}'
 
     @classmethod
-    def search_by_keywords(cls, keywords, start=0, count=15):
-        url = cls.keywords_url.format(keywords, start, count)
+    def search_by_keywords(cls, keywords, count=15):
+        url = cls.keywords_url.format(keywords, count)
         result = HTTP.get(url=url)
         return result
+
+
+class BookViewModel:
+    """
+    图书view
+    """
+
+    @classmethod
+    def package_data(cls, data, keyword):
+        res = {
+            'books': [],
+            'total': 0,
+            'keyword': keyword
+        }
+        if data:
+            res['total'] = 1
+            res['books'] = [cls.__book_init_data(_book) for _book in data["books"]]
+        return res
+
+    @classmethod
+    def __book_init_data(cls, data):
+        book = {
+            'title': data["title"],
+            'author': data["author"],
+            'image': data["image"]
+        }
+
+        return book
