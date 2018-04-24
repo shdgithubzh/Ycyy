@@ -1,4 +1,4 @@
-# YCYY
+﻿# YCYY
 优易数据协同项目
 
 ## Contributors
@@ -8,6 +8,8 @@
 * [徐家琪](https://github.com/xujiaqi/Ycyy)
 
 * [王鹏程](https://github.com/Twndlt/Ycyy.git)
+
+* [Twndlt](https://github.com/Twndlt/Ycyy.git)
 ## deploy（后期加）
 **Docker部署**
 
