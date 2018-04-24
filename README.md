@@ -5,6 +5,7 @@
 
 * [se7en](https://github.com/litt1eseven/Ycyy)
 * [唐诚](https://github.com/woxingyiyi/Ycyy)
+* [徐家琪](https://github.com/xujiaqi/Ycyy)
 
 ## deploy（后期加）
 **Docker部署**
