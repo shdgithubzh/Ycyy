@@ -1,5 +1,9 @@
 # 优易数据（协同项目）
 
+## 成员
+
+* [se7en](https://github.com/litt1eseven/Ycyy)
+
 ### ** 前端效果 **
 
 ![效果](https://github.com/litt1eseven/python-project/blob/master/Company%20project/images/ycyy-xietong.png)
