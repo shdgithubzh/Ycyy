@@ -8,6 +8,8 @@
 * [徐家琪](https://github.com/xujiaqi/Ycyy)
 * [王鹏程](https://github.com/Twndlt/Ycyy.git)
 * [辅小红](https://github.com/fxiaohong/Ycyy)
+* [崔燕南](https://github.com/c502556190/Ycyy)
+
 ## deploy（后期加）
 **Docker部署**
 
