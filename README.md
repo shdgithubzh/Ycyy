@@ -5,7 +5,6 @@
 
 * [se7en](https://github.com/litt1eseven/Ycyy)
 * [唐诚](https://github.com/woxingyiyi/Ycyy)
-<<<<<<< HEAD
 * [徐家琪](https://github.com/xujiaqi/Ycyy)
 * [王鹏程](https://github.com/Twndlt/Ycyy.git)
 * [辅小红](https://github.com/fxiaohong/Ycyy)
@@ -13,8 +12,6 @@
 * [许明伟](https://github.com/CherishMIWD/Ycyy)
 * [郭扛扛](https://github.com/631540886/Ycyy)
 * [陈海源](https://github.com/chenhaiyuan53880/Ycyy)
-=======
->>>>>>> update
 
 ## deploy（后期加）
 **Docker部署**
